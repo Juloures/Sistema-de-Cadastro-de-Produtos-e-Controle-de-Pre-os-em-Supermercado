@@ -14,7 +14,7 @@ descricao text,
 preco decimal(10,2) not null,
 quantidade_estoque int not null default 0,
 id_categoria int not null,
-FOREIGN KEY (id_categoria) references Categoria(id)
+FOREIGN KEY (id_categoria) references Categorias(id_categoria)
 );
 
 create table HistoricoPrecos (
@@ -23,6 +23,6 @@ id_produto int not null,
 preco_anterior decimal(10,2) not null,
 preco_atual decimal (10,2) not null,
 data_alteracao timestamp default current_timestamp,
-foreign key (id_produto) references Produto(id)
+foreign key (id_produto) references Produtos(id_produto)
 );
 
